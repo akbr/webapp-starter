@@ -19,9 +19,6 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel-loader',
     }]
-  }
-  node: {
-    fs: "empty"
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
