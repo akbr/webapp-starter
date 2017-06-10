@@ -2,10 +2,10 @@ var path = require("path")
 var webpack = require("webpack")
 var pkg = require("./package.json")
 
-module.exports = {
+var config = {
   entry: {
-    index: ['./src/index.js'],
-    vendor: Object.keys(pkg.dependencies),
+    index: './src/index.js',
+    //vendor: if dependencies are specified,
   },
   output: {
     path: path.resolve("bin"),
@@ -21,6 +21,13 @@ module.exports = {
     }]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
+    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' })
   ]
  }
+
+var dependencies = Object.keys(pkg.dependencies)
+if (dependencies.length > 0) {
+  config.entry.vendor = dependencies
+}
+
+module.exports = config
