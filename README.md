@@ -1,1 +1,1 @@
-A starter kit for web applications.
+a web dev starter

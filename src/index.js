@@ -1,5 +1,7 @@
-let test = {}
+const hello = {
+	msg: 'Hello, world!'
+};
+
 console.log({
-  ...test,
-  msg: 'Hello, world!'
+	...hello
 });
