@@ -1,1 +1,0 @@
-{"version":3,"file":"index.bundle.js","sources":["webpack:///src/index.js"],"sourcesContent":["const hello = {\r\n\tmsg: 'Hello, world!'\r\n};\r\n\r\nconsole.log({\r\n\t...hello\r\n});\n\n\n// WEBPACK FOOTER //\n// src/index.js"],"mappings":";;;;;;AAAA;AACA;AADA;AACA;AAGA;;;A","sourceRoot":""}
