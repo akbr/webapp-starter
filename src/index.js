@@ -1,7 +1,5 @@
-const hello = {
-	msg: 'Hello, world!'
-};
+let first = {hello: true};
+let second = {world: true};
+let combo = {...first, ...second};
 
-console.log({
-	...hello
-});
+console.log(combo);
